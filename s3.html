@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gaon Doctor AI</title>
+</head>
+
+<body style="font-family: Arial; padding:20px;">
+
+<h1>Gaon Doctor AI</h1>
+
+<p><b>Patient Name:</b> Ramesh</p>
+<p><b>Symptoms:</b> Fever, weakness</p>
+
+<h2>Diagnosis</h2>
+<p id="result"></p>
+
+<button onclick="checkHealth()">Check Health</button>
+
+<script>
+function checkHealth() {
+    let riskScore = 0.85; // dummy AI value
+    let result = "";
+
+    if (riskScore > 0.8) {
+        result = "RED: Emergency 🚨";
+        alert("SMS Sent to Doctor!");
+    } 
+    else if (riskScore > 0.4) {
+        result = "YELLOW: Visit Doctor";
+    } 
+    else {
+        result = "GREEN: Home Care";
+    }
